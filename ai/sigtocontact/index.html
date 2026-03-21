@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SigToContact — Turn Email Signatures Into Contacts Instantly</title>
+  <meta name="description" content="Snap a screenshot of any email signature and AI instantly extracts the contact info. One tap to save to Google Contacts, Outlook, or your phone.">
+  <link rel="icon" type="image/png" href="../images/sigtocontact-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="/ai" class="nav-brand">
+        <span class="silver">Silver</span>Lining<span class="lining">Projects</span>
+      </a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/ai">Home</a></li>
+        <li><a href="/ai#projects">Projects</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="privacy/">Privacy</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Product Hero -->
+  <section class="product-hero">
+    <div class="container">
+      <div class="app-icon">
+        <img src="../images/sigtocontact-icon.png" alt="SigToContact app icon">
+      </div>
+      <h1>SigToContact</h1>
+      <p class="tagline">
+        Turn any email signature into a saved contact — in seconds.
+      </p>
+      <div class="store-buttons" id="download">
+        <a href="#" class="store-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M3.609 1.814L13.792 12 3.609 22.186a.996.996 0 01-.609-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.707l2.108 1.22a1 1 0 010 1.56l-2.108 1.22-2.537-2.537 2.537-2.463zM5.864 1.471L16.8 7.804l-2.302 2.302L5.864 1.471z"/></svg>
+          <div>
+            <div class="store-label">Get it on</div>
+            <div class="store-name">Google Play</div>
+          </div>
+        </a>
+        <a href="#" class="store-btn disabled">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <div>
+            <div class="store-label">Coming soon on</div>
+            <div class="store-name">App Store</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">How It Works</span>
+        <h2>Three Steps. Zero Hassle.</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Snap or Select</h3>
+          <p>Take a photo of an email signature or pick a screenshot from your gallery.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>AI Extracts</h3>
+          <p>Google's Gemini AI reads the signature and pulls out every detail — name, phone, email, company, social links, and more.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Review &amp; Save</h3>
+          <p>Verify the extracted info, pick your address book (Google, Outlook, phone), and save with one tap.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Features</span>
+        <h2>Everything You Need, Nothing You Don't</h2>
+      </div>
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="feature-icon">&#129302;</div>
+          <div>
+            <h3>AI-Powered Extraction</h3>
+            <p>Google Gemini reads signatures with near-human accuracy. Names, titles, phone numbers, emails, websites, social profiles — all captured.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">&#128222;</div>
+          <div>
+            <h3>Smart Phone Formatting</h3>
+            <p>Phone numbers are automatically formatted to international E.164 standard. Extensions are preserved with auto-dial support.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">&#128213;</div>
+          <div>
+            <h3>Choose Your Address Book</h3>
+            <p>Save to Google Contacts, Outlook/Office 365, Samsung, or your local phone contacts. You pick where each contact goes.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">&#128247;</div>
+          <div>
+            <h3>Camera &amp; Gallery</h3>
+            <p>Take a live photo of a business card or email signature, or pick an existing screenshot from your photo gallery.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">&#128279;</div>
+          <div>
+            <h3>Social Media Links</h3>
+            <p>LinkedIn, Twitter, GitHub, and other social profiles found in signatures are captured and saved to your contact.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">&#128274;</div>
+          <div>
+            <h3>100% Private</h3>
+            <p>No data is stored on any server. Images are processed through Google's API and immediately discarded. Everything stays on your device.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">&#128179;</div>
+          <div>
+            <h3>Share as vCard</h3>
+            <p>Export any extracted contact as a standard vCard file. Share it via email, messaging, or AirDrop.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">&#9889;</div>
+          <div>
+            <h3>Completely Free</h3>
+            <p>No subscription, no in-app purchases. SigToContact uses your free Google account — no API keys or setup required.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platforms -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Platforms</span>
+        <h2>Available Where You Are</h2>
+        <p>SigToContact is designed to work across all your devices.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">&#128241;</div>
+          <h3>Android</h3>
+          <p>Available on Google Play. Requires Android 8.0 or later. Sign in with your Google account and start converting signatures immediately.</p>
+          <br>
+          <a href="#" class="btn btn-primary btn-sm">Google Play</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#127822;</div>
+          <h3>iOS</h3>
+          <p>Coming soon to the App Store. The same great experience, optimized for iPhone and iPad.</p>
+          <br>
+          <span class="badge">Coming Soon</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#128187;</div>
+          <h3>Windows &amp; Mac</h3>
+          <p>Desktop versions available as standalone apps and system tray utilities. Copy an email signature and convert it without leaving your workflow.</p>
+          <br>
+          <span class="badge active">Available</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Stop Typing Contacts by Hand</h2>
+      <p>Download SigToContact and turn any email signature into a saved contact in seconds.</p>
+      <a href="#download" class="btn">Download Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">
+            <span class="silver">Silver</span>Lining<span class="lining">Projects</span>
+          </div>
+          <p>AI tools and training with real impact.</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="/ai">Home</a></li>
+          <li><a href="/ai#projects">Projects</a></li>
+          <li><a href="privacy/">Privacy Policy</a></li>
+          <li><a href="mailto:info@silverliningprojects.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Silver Lining Projects. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
