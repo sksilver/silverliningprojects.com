@@ -71,9 +71,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: inline;
   font-size: 20px;
   font-weight: 700;
   color: var(--text);
