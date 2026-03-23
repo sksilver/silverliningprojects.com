@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W4G8C1CVRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W4G8C1CVRL');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SilverLiningProjects | Growth Marketing, Brand Strategy &amp; AI</title>
+  <meta name="description" content="SilverLiningProjects is a marketing consultancy specializing in growth marketing, brand strategy, social media, influencer marketing, and AI-powered tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ai/css/style.css">
+  <style>
+    .founder-section {
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .founder-bio { flex: 1; }
+    .founder-bio h3 { font-size: 28px; margin-bottom: 4px; }
+    .founder-bio .founder-title { color: var(--gray); font-size: 16px; margin-bottom: 20px; font-weight: 500; }
+    .founder-bio p { color: var(--text-light); font-size: 16px; line-height: 1.7; margin-bottom: 16px; }
+    .brand-logos { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; align-items: center; }
+    .brand-logos span { font-size: 14px; color: var(--gray-light); font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+    .service-item { padding: 32px; border: 1px solid var(--border); border-radius: var(--radius); }
+    .service-item h3 { font-size: 20px; margin-bottom: 12px; }
+    .service-item p { color: var(--text-light); font-size: 15px; line-height: 1.6; }
+    .hero-home { padding: 120px 0 100px; text-align: center; }
+    .hero-home h1 { font-size: 56px; font-weight: 300; line-height: 1.2; margin-bottom: 24px; letter-spacing: -1px; }
+    .hero-home h1 strong { font-weight: 700; }
+    .hero-home p { font-size: 20px; color: var(--text-light); max-width: 600px; margin: 0 auto 40px; }
+    .divider { width: 60px; height: 1px; background: var(--silver); margin: 0 auto 40px; }
+    @media (max-width: 768px) {
+      .founder-section { flex-direction: column; }
+      .hero-home h1 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-brand">
+        <span class="silver">Silver</span>Lining<span class="lining">Projects</span>
+      </a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#brands">Experience</a></li>
+        <li><a href="/ai">AI Division</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-home">
+    <div class="container">
+      <div class="divider"></div>
+      <h1>Every Brand Has a<br><strong>Silver Lining</strong></h1>
+      <p>
+        Growth marketing, brand strategy, and AI-powered tools
+        that create real, measurable impact.
+      </p>
+      <div class="btn-group">
+        <a href="#services" class="btn btn-primary">What We Do</a>
+        <a href="#contact" class="btn btn-outline">Work With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Services</span>
+        <h2>Marketing That Moves the Needle</h2>
+        <p>From social strategy to AI automation, we deliver results across every channel.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>Growth Marketing</h3>
+          <p>Performance-driven campaigns across paid social, search, and display that generate leads and drive revenue. Strategy built on data, executed with precision.</p>
+        </div>
+        <div class="service-item">
+          <h3>Brand Strategy</h3>
+          <p>Positioning, messaging, and creative direction that makes luxury brands unmistakable. Building brand equity that translates to long-term value.</p>
+        </div>
+        <div class="service-item">
+          <h3>Social Media</h3>
+          <p>Full-service social media management, content strategy, and community engagement across every platform. Organic and paid, always on-brand.</p>
+        </div>
+        <div class="service-item">
+          <h3>Influencer Marketing</h3>
+          <p>Authentic partnerships with creators and tastemakers that reach the right audiences. From identification to execution to measurement.</p>
+        </div>
+        <div class="service-item">
+          <h3>Communications &amp; PR</h3>
+          <p>Strategic communications, media relations, and crisis management that protect and elevate your brand reputation.</p>
+        </div>
+        <div class="service-item">
+          <h3>AI-Powered Tools</h3>
+          <p>Custom AI solutions that automate tedious processes and unlock new efficiencies. From email signature conversion to data extraction.</p>
+          <br>
+          <a href="/ai" class="btn btn-primary btn-sm" style="font-size:14px; padding:10px 20px;">Explore AI Division</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Founder -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">About</span>
+        <h2>Founded on Experience</h2>
+      </div>
+      <div class="founder-section">
+        <div class="founder-bio">
+          <h3>Erin Silver</h3>
+          <p class="founder-title">Founder, SilverLiningProjects</p>
+          <p>
+            Erin Silver founded SilverLiningProjects to help companies navigate the
+            evolving landscape of digital marketing. With nearly two decades of
+            experience leading marketing for some of the world's most recognized
+            luxury brands, she brings a rare combination of strategic vision and
+            hands-on execution.
+          </p>
+          <p>
+            Her career spans leadership roles at Burberry, David Yurman, Ralph Lauren,
+            and Volvo Cars, where she served as Head of Social Media and Influencer
+            Marketing for six years. Today she leads marketing for The Exclusive
+            Collective, the parent company of Exclusive Resorts, Inspirato, and
+            onefinestay.
+          </p>
+          <p>
+            Erin also serves on the National Advertising Review Board (NARB) at BBB
+            National Programs, setting standards for advertising truth and accuracy
+            across the United States.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Experience -->
+  <section class="section section-alt" id="brands">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Experience</span>
+        <h2>Trusted by World-Class Brands</h2>
+        <p>A track record of results across luxury, automotive, hospitality, and lifestyle.</p>
+      </div>
+      <div class="brand-logos">
+        <span>Burberry</span>
+        <span>David Yurman</span>
+        <span>Ralph Lauren</span>
+        <span>Volvo Cars</span>
+        <span>Exclusive Resorts</span>
+        <span>Inspirato</span>
+        <span>onefinestay</span>
+        <span>BBB National Programs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialties -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Specialties</span>
+        <h2>What Sets Us Apart</h2>
+      </div>
+      <div class="values">
+        <div class="value-item">
+          <div class="number">01</div>
+          <h3>Luxury Expertise</h3>
+          <p>Deep understanding of the luxury consumer. We know how to speak to affluent audiences without losing authenticity or brand integrity.</p>
+        </div>
+        <div class="value-item">
+          <div class="number">02</div>
+          <h3>Full Funnel</h3>
+          <p>From awareness to conversion, we build strategies that work across the entire customer journey. Not just impressions. Revenue.</p>
+        </div>
+        <div class="value-item">
+          <div class="number">03</div>
+          <h3>Data-Driven</h3>
+          <p>Every decision backed by analytics. Every campaign measured. We optimize relentlessly so your budget works harder.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner" id="contact">
+    <div class="container">
+      <h2>Ready to Find Your Silver Lining?</h2>
+      <p>
+        Whether you need a growth strategy, social media leadership,
+        or a custom AI tool, we'd love to hear from you.
+      </p>
+      <a href="mailto:info@silverliningprojects.com" class="btn">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">
+            <span class="silver">Silver</span>Lining<span class="lining">Projects</span>
+          </div>
+          <p>Growth marketing, brand strategy, and AI.</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/ai">AI Division</a></li>
+          <li><a href="/ai/sigtocontact/privacy/">Privacy</a></li>
+          <li><a href="mailto:info@silverliningprojects.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 SilverLiningProjects. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
