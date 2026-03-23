@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W4G8C1CVRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W4G8C1CVRL');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | SilverLiningProjects</title>
+  <meta name="description" content="Get in touch with SilverLiningProjects for growth marketing, brand strategy, social media, and AI consulting.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../ai/css/style.css">
+  <style>
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 24px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--black);
+    }
+    .form-group textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: var(--black);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .submit-btn:hover { background: var(--dark); }
+    .contact-info {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+    }
+    .contact-info p {
+      color: var(--text-light);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .contact-info a {
+      color: var(--black);
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="/draft-x7k9m2q/" class="nav-brand">
+        <span class="silver">Silver</span>Lining<span class="lining">Projects</span>
+      </a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/draft-x7k9m2q/">Home</a></li>
+        <li><a href="/draft-x7k9m2q/#services">Services</a></li>
+        <li><a href="/draft-x7k9m2q/#about">About</a></li>
+        <li><a href="/ai">AI Division</a></li>
+        <li><a href="/draft-x7k9m2q/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Form -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Contact</span>
+        <h2>Let's Talk</h2>
+        <p>Tell us about your project and we'll get back to you within 24 hours.</p>
+      </div>
+
+      <div class="contact-form">
+        <form action="https://formspree.io/f/FORM_ID_HERE" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Your company">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="interest">I'm interested in</label>
+            <select id="interest" name="interest">
+              <option value="">Select an option</option>
+              <option value="Growth Marketing">Growth Marketing</option>
+              <option value="Brand Strategy">Brand Strategy</option>
+              <option value="Social Media">Social Media</option>
+              <option value="Influencer Marketing">Influencer Marketing</option>
+              <option value="Communications & PR">Communications &amp; PR</option>
+              <option value="AI Tools">AI-Powered Tools</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project, goals, or questions..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+          <p>Prefer email? Reach us directly at</p>
+          <p><a href="mailto:info@silverliningprojects.com">info@silverliningprojects.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">
+            <span class="silver">Silver</span>Lining<span class="lining">Projects</span>
+          </div>
+          <p>Growth marketing, brand strategy, and AI.</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="/draft-x7k9m2q/">Home</a></li>
+          <li><a href="/ai">AI Division</a></li>
+          <li><a href="/ai/sigtocontact/privacy/">Privacy</a></li>
+          <li><a href="mailto:info@silverliningprojects.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 SilverLiningProjects. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
