@@ -84,15 +84,27 @@
         using the buttons in the App.
       </p>
 
+      <h2>Camera and Photo Access</h2>
+      <p>
+        The App requests your permission to access your camera and photo gallery.
+        This permission allows you to take a photo of a signature or choose an
+        existing screenshot from your library. The App never automatically scans,
+        browses, or processes your photos — it only uses the specific image you
+        select each time.
+      </p>
+
       <h2>Google Gemini AI</h2>
       <p>
-        When you choose a screenshot or photo of an email signature to process,
-        that specific image is sent from your device to Google's Gemini API using
-        your own Google account credentials. The App does not access, browse, or
-        search your photos or camera roll — only the image you select is shared.
-        This is a direct communication between your device and Google's servers
-        using your account. We do not see, intercept, or store these images or
-        the results. Google's use of this data is governed by the
+        When you select a screenshot or photo and tap to process it, that single
+        image is sent from your device to Google's Gemini AI for contact extraction.
+        This uses <strong>your own Google account credentials</strong> — the App does
+        not use any SilverLiningProjects API keys or accounts. The communication is
+        directly between your device and Google's servers. We do not see, intercept,
+        or store the image or the results.
+      </p>
+      <p>
+        No other images on your device are sent or processed — only the one you
+        choose. Google's handling of this data is governed by the
         <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Terms of Service</a>
         and
         <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
@@ -109,15 +121,6 @@
         phone contacts, etc.) using your device's native contacts API. This is
         a local operation between the App and your device's contact storage. We
         have no access to your contacts.
-      </p>
-
-      <h2>Camera and Photo Access</h2>
-      <p>
-        The App requests permission to access your camera and photo gallery so you
-        can take photos of email signatures or select existing screenshots. These
-        images are used solely for contact extraction and are never uploaded to
-        any server operated by us. After processing, images are not retained by
-        the App.
       </p>
 
       <h2>Data Storage</h2>

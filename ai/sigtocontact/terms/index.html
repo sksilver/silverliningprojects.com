@@ -55,25 +55,28 @@
       <h2>1. Description of Service</h2>
       <p>
         SigToContact is a mobile application that uses Google Gemini AI to extract
-        contact information from email signatures. You select a screenshot or photo
-        containing a signature to share with the App — it does not access, browse,
-        or search your photos or camera roll. The App saves extracted contacts to
-        your device's address book.
+        contact information from email signatures. The App requests your permission
+        to access your camera and photo gallery so you can take a photo or choose
+        a screenshot. The App never automatically scans, browses, or processes your
+        photos — it only uses the specific image you select each time. Extracted
+        contacts are saved to your device's address book.
       </p>
 
       <h2>2. Google Account Requirement</h2>
       <p>
         The App requires a Google account to function. By signing in, you authorize
-        the App to use your Google account's Gemini AI access to process images.
-        You are responsible for maintaining the security of your Google account.
+        the App to use your own Google account's Gemini AI access to process the
+        images you select. SilverLiningProjects does not provide or use any of its
+        own API keys, accounts, or servers. You are responsible for maintaining the
+        security of your Google account.
       </p>
 
       <h2>3. AI Processing and Data</h2>
       <p>
-        When you select a screenshot or photo of an email signature to process, that
-        image is sent directly from your device to Google's Gemini API using your own
-        Google account credentials. The App does not use any SilverLiningProjects
-        API keys, accounts, or servers.
+        When you select a screenshot or photo and tap to process it, that single
+        image is sent directly from your device to Google's Gemini API using your
+        own Google account credentials. No other images on your device are sent
+        or accessed.
         SilverLiningProjects does not receive, store, or have access to your images
         or extracted contact data. Google's handling of data submitted to the Gemini
         API is governed by the
