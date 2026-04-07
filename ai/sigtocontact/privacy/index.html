@@ -44,7 +44,7 @@
     <div class="container">
       <span class="tag">Legal</span>
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: April 5, 2026</p>
+      <p class="last-updated">Last updated: April 7, 2026</p>
 
       <p>
         SilverLiningProjects ("we", "our", "us") built the SigToContact app
@@ -55,115 +55,77 @@
 
       <h2>Summary</h2>
       <p>
-        <strong>SilverLiningProjects does not collect, store, or have access to
-        any of your personal data.</strong> We have no servers or databases.
-        When you select an image to scan, it is sent directly from your device
-        to Google's Gemini AI using your own Google account credentials. The
-        extracted contact data is returned to your device and stays there. We
-        are never part of this exchange.
+        SigToContact is designed so SilverLiningProjects does not receive or store
+        your data. The app has no SilverLiningProjects servers, databases, analytics,
+        or trackers. When you choose an image to convert, the app sends that image
+        directly from your device to Google's Gemini AI using your Google account,
+        then shows you the extracted contact details on your device so you can review
+        and save them.
       </p>
 
-      <h2>Information We Do NOT Collect</h2>
-      <ul>
-        <li>Contact information extracted from images</li>
-        <li>Photos, screenshots, or images you provide to the App</li>
-        <li>Your contacts or address book data</li>
-        <li>Your name, email, or Google account details (beyond what is needed for sign-in)</li>
-        <li>Usage analytics, crash reports, or behavioral data</li>
-        <li>Device identifiers, IP addresses, or location data</li>
-      </ul>
-
-      <h2>Google Sign-In</h2>
+      <h2>How the App Works</h2>
       <p>
-        The App uses Google Sign-In to authenticate your identity. When you sign in,
-        we receive your name, email address, and profile photo from Google. This
-        information is stored <strong>only on your device</strong> (in secure local storage)
-        and is used solely to display your account name within the App. It is never
-        transmitted to any server operated by us.
+        <strong>Google Sign-In:</strong> You sign in with your Google account using
+        Google Sign-In. SigToContact does not see your Google password. The app stores
+        a Google access token on your device only to keep you signed in.
       </p>
       <p>
-        You can sign out and delete all locally stored account data at any time
-        using the buttons in the App.
-      </p>
-
-      <h2>Camera and Photo Access</h2>
-      <p>
-        The App requests your permission to access your camera and photo gallery.
-        This permission allows you to take a photo or choose one or more
-        existing screenshots from your library. You may select multiple images
-        of the same contact and the App will merge them into a single contact
-        record. The App never automatically scans, browses, or processes your
-        photos — it only uses the specific images you select each time.
-      </p>
-
-      <h2>Google Gemini AI</h2>
-      <p>
-        When you select one or more screenshots or photos and tap to process them,
-        the selected images are sent from your device to Google's Gemini AI for
-        contact extraction. This uses <strong>your own Google account credentials</strong>
-        — the App does not use any SilverLiningProjects API keys or accounts. The
-        communication is directly between your device and Google's servers. We do not
-        see, intercept, or store the images or the results.
-      </p>
-      <p>
-        No other images on your device are sent or processed — only the ones you
-        choose. Google may retain submitted images per their terms of service.
-        Google's handling of this data is governed by the
+        <strong>Image processing (Gemini AI):</strong> When you select a photo or take
+        a picture to convert, the app sends only the image(s) you selected to Google's
+        Gemini AI over HTTPS using your Google account's authorization.
+        SilverLiningProjects is not in the network path and does not receive the images.
+        You may select multiple images of the same contact and the app will merge them
+        into a single contact record. Google's handling and retention of submitted
+        content is governed by the
         <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Terms of Service</a>
         and
         <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
       </p>
       <p>
-        The extracted contact information is returned directly to your device and
-        is never sent anywhere else.
+        <strong>Contact creation:</strong> The extracted contact data is displayed in
+        the app for you to edit. If you choose to save it, the app writes the contact
+        to your device's contacts provider (and any account you choose, such as Google
+        Contacts). SilverLiningProjects does not receive the contact data.
       </p>
 
-      <h2>Contact Data</h2>
+      <h2>What We Collect</h2>
       <p>
-        When you choose to save an extracted contact, the App writes the contact
-        information to the address book you select (Google Contacts, Outlook,
-        phone contacts, etc.) using your device's native contacts API. This is
-        a local operation between the App and your device's contact storage. We
-        have no access to your contacts.
+        SilverLiningProjects does not collect, store, or receive personal data from
+        SigToContact. We do not run servers for this app, and we do not include
+        analytics or advertising SDKs.
+      </p>
+
+      <h2>What Is Shared with Third Parties</h2>
+      <p>
+        To provide the app's core functionality, SigToContact communicates with:
+      </p>
+      <ul>
+        <li><strong>Google Sign-In</strong> (authentication)</li>
+        <li><strong>Google Gemini AI</strong> (processing user-selected images)</li>
+      </ul>
+      <p>
+        These communications occur between your device and Google.
+        SilverLiningProjects does not receive the content, but Google may process
+        and retain it as described in Google's policies.
       </p>
 
       <h2>Data Storage</h2>
       <p>
-        All data used by the App — your sign-in session, preferences, and any
-        temporary processing data — is stored locally on your device using secure
-        storage mechanisms. No data is stored in any cloud service, database, or
-        server operated by SilverLiningProjects.
+        All data used by the app (your sign-in session, scan counter, and preferences)
+        is stored locally on your device using secure storage mechanisms. No data is
+        stored in any cloud service, database, or server operated by
+        SilverLiningProjects.
       </p>
 
-      <h2>Usage Data</h2>
+      <h2>Data Deletion</h2>
       <p>
-        The App stores a scan counter locally on your device to manage daily usage
-        limits. This counter is stored in secure local storage and is never transmitted
-        to any server. It resets automatically each day. No usage analytics, behavioral
-        data, or activity logs are collected or sent anywhere.
-      </p>
-
-      <h2>Data Sharing</h2>
-      <p>
-        We do not share any data with third parties. The only external communication
-        the App makes is:
-      </p>
-      <ul>
-        <li><strong>Google Sign-In:</strong> To authenticate your identity (standard OAuth 2.0 flow)</li>
-        <li><strong>Google Gemini API:</strong> To process images for contact extraction</li>
-      </ul>
-      <p>
-        Both of these are direct communications between your device and Google. We
-        are not an intermediary and do not have access to this data in transit.
-      </p>
-
-      <h2>Account Deletion</h2>
-      <p>
-        You can delete your account and all associated local data at any time by
-        tapping the delete (trash) icon in the App's header. This immediately removes
-        all locally stored data including your sign-in session. Since we store no
-        data on any server, there is nothing else to delete. For step-by-step
-        instructions, visit our
+        Because SilverLiningProjects does not store your data, there is nothing we
+        can delete on your behalf. You can remove locally stored app data by
+        uninstalling the app or using the in-app "Delete Account &amp; Data" option
+        (which clears locally stored session and state). You can revoke Google access
+        at your
+        <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google account permissions page</a>.
+        For step-by-step instructions, visit our
         <a href="/ai/sigtocontact/delete-data/">Delete Your Data</a> page.
       </p>
 
