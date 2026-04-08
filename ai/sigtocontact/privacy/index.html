@@ -44,7 +44,7 @@
     <div class="container">
       <span class="tag">Legal</span>
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: April 7, 2026</p>
+      <p class="last-updated">Last updated: April 8, 2026</p>
 
       <p>
         SilverLiningProjects ("we", "our", "us") built the SigToContact app
@@ -87,6 +87,76 @@
         to your device's contacts provider (and any account you choose, such as Google
         Contacts). SilverLiningProjects does not receive the contact data.
       </p>
+
+      <h2>Google User Data</h2>
+      <p>
+        SigToContact requests the following Google OAuth scopes and accesses the
+        following Google user data:
+      </p>
+
+      <h3>Data Accessed</h3>
+      <ul>
+        <li><strong>Google Sign-In profile:</strong> Your name, email address, and
+          profile photo are received from Google when you sign in. These are used
+          only to display your identity within the app.</li>
+        <li><strong>Gemini AI (generative-language.retriever scope):</strong> The app
+          sends user-selected images to Google's Gemini API using your Google account's
+          OAuth token. The API returns extracted contact text (names, phone numbers,
+          emails, addresses). No other Google data is accessed.</li>
+        <li><strong>Contacts (contacts scope):</strong> The app writes new contacts to
+          your device's address book. It does not read, browse, or delete existing
+          contacts.</li>
+      </ul>
+
+      <h3>Data Usage</h3>
+      <ul>
+        <li>Your Google profile (name, email, photo) is used solely to display your
+          identity in the app and to maintain your sign-in session.</li>
+        <li>Images you select are sent to Google Gemini exclusively for the purpose of
+          extracting contact information. They are not used for any other purpose.</li>
+        <li>The contacts scope is used only to save extracted contacts to your device's
+          address book.</li>
+      </ul>
+
+      <h3>Data Sharing</h3>
+      <ul>
+        <li>SilverLiningProjects does not share any Google user data with any third
+          party.</li>
+        <li>User-selected images are transmitted directly from the user's device to
+          Google's Gemini API. SilverLiningProjects is not in the transmission path
+          and does not receive, intercept, or forward this data.</li>
+        <li>No Google user data is shared for advertising, analytics, marketing, or
+          any purpose other than the core app functionality described above.</li>
+      </ul>
+
+      <h3>Data Storage and Protection</h3>
+      <ul>
+        <li>SilverLiningProjects does not operate any servers or databases. No Google
+          user data is stored on any infrastructure controlled by us.</li>
+        <li>Your Google OAuth access token and profile information are stored locally
+          on your device in encrypted secure storage (Expo SecureStore).</li>
+        <li>A local scan counter (number of scans used today) is stored on your device
+          in secure storage. It contains no personal information.</li>
+        <li>All communication between the app and Google services uses HTTPS/TLS
+          encryption.</li>
+      </ul>
+
+      <h3>Data Retention and Deletion</h3>
+      <ul>
+        <li>SilverLiningProjects retains no Google user data because we have no servers.</li>
+        <li>Locally stored data (OAuth token, profile, scan counter) is retained on your
+          device until you sign out, delete your account data, or uninstall the app.</li>
+        <li>You can delete all locally stored data at any time by tapping the "Delete
+          Account &amp; Data" button in the app, or by uninstalling. For step-by-step
+          instructions, visit our
+          <a href="/ai/sigtocontact/delete-data/">Delete Your Data</a> page.</li>
+        <li>You can revoke the app's access to your Google account at any time at your
+          <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google account permissions page</a>.</li>
+        <li>Google's own retention of data submitted to the Gemini API is governed by
+          <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google's Gemini API Terms</a>
+          and
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+      </ul>
 
       <h2>What We Collect</h2>
       <p>
