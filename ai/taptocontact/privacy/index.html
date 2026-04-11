@@ -44,7 +44,7 @@
     <div class="container">
       <span class="tag">Legal</span>
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: April 8, 2026</p>
+      <p class="last-updated">Last updated: April 11, 2026</p>
 
       <p>
         SilverLiningProjects ("we", "our", "us") built the TapToContact app
@@ -57,10 +57,11 @@
       <p>
         TapToContact is designed so SilverLiningProjects does not receive or store
         your data. The app has no SilverLiningProjects servers, databases, analytics,
-        or trackers. When you choose an image to convert, the app sends that image
-        directly from your device to Google's Gemini AI using your Google account,
-        then shows you the extracted contact details on your device so you can review
-        and save them.
+        or trackers. When you choose content to convert &mdash; whether you pick an
+        image, take a photo, or share an image, web link, or text to the app from
+        another app &mdash; the content goes directly from your device to Google's
+        Gemini AI using your Google account, and the extracted contact details are
+        shown on your device so you can review and save them.
       </p>
 
       <h2>How the App Works</h2>
@@ -82,6 +83,31 @@
         <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
       </p>
       <p>
+        <strong>Share extension (images, web links, text):</strong> TapToContact
+        registers as a destination in your device's system share sheet. When you tap
+        Share in any other app (Gmail, Safari, Photos, Messages, and so on) and pick
+        TapToContact, the content you shared &mdash; an image, a web link, or selected
+        text &mdash; is handed to TapToContact by the operating system. The app then
+        processes that single piece of content using the same Gemini flow described
+        above. Nothing else on your device is accessed or sent. If you share a web
+        link, your device fetches the page and sends only the resulting text to
+        Gemini for contact extraction. If you share text, the text is sent as-is.
+        In all cases, SilverLiningProjects is not in the network path.
+      </p>
+      <p>
+        <strong>Photo library (optional delete after save):</strong> After you save a
+        contact that was extracted from one or more photos you picked from your
+        device's Photos library (including screenshots), TapToContact may ask if you
+        want to delete those specific source photo(s) from your Photos library. This
+        is entirely optional. If you choose to delete, the app uses your device's
+        Photos API to delete only the specific photo(s) you just processed, and your
+        operating system shows its own confirmation dialog before the deletion
+        happens. The app never reads, browses, or modifies any other photo in your
+        library. Photos taken with the in-app camera, photos shared into the app
+        from other apps, and shared web links or text never trigger the delete
+        prompt because they are not items in your Photos library.
+      </p>
+      <p>
         <strong>Contact creation:</strong> The extracted contact data is displayed in
         the app for you to edit. If you choose to save it, the app writes the contact
         to your device's contacts provider (and any account you choose, such as Google
@@ -100,31 +126,52 @@
           profile photo are received from Google when you sign in. These are used
           only to display your identity within the app.</li>
         <li><strong>Gemini AI (generative-language.retriever scope):</strong> The app
-          sends user-selected images to Google's Gemini API using your Google account's
-          OAuth token. The API returns extracted contact text (names, phone numbers,
-          emails, addresses). No other Google data is accessed.</li>
+          sends user-selected or user-shared content &mdash; images, fetched web page
+          text, or shared text &mdash; to Google's Gemini API using your Google
+          account's OAuth token. The API returns extracted contact text (names, phone
+          numbers, emails, addresses). No other Google data is accessed.</li>
         <li><strong>Contacts (contacts scope):</strong> The app writes new contacts to
           your device's address book. It does not read, browse, or delete existing
           contacts.</li>
+        <li><strong>Device Photos library (optional, user-initiated only):</strong>
+          If you choose to delete a source photo after saving a contact, the app
+          uses the device Photos API to delete only the specific photo(s) you
+          just processed. The app does not read, browse, list, or modify any other
+          photo in your library. The operating system shows its own confirmation
+          dialog before any deletion occurs.</li>
+        <li><strong>Shared content (system share sheet):</strong> When you send an
+          image, web link, or text to TapToContact from another app via the system
+          share sheet, the operating system hands that single piece of content to
+          the app. The app does not have access to any other content in the source
+          app or on your device.</li>
       </ul>
 
       <h3>Data Usage</h3>
       <ul>
         <li>Your Google profile (name, email, photo) is used solely to display your
           identity in the app and to maintain your sign-in session.</li>
-        <li>Images you select are sent to Google Gemini exclusively for the purpose of
-          extracting contact information. They are not used for any other purpose.</li>
+        <li>Images, fetched web page text, and shared text are sent to Google Gemini
+          exclusively for the purpose of extracting contact information. They are
+          not used for any other purpose.</li>
         <li>The contacts scope is used only to save extracted contacts to your device's
           address book.</li>
+        <li>The Photos library delete capability is used only, and only when you
+          confirm, to remove the specific source photo(s) you just used for a
+          successful contact save.</li>
       </ul>
 
       <h3>Data Sharing</h3>
       <ul>
         <li>SilverLiningProjects does not share any Google user data with any third
           party.</li>
-        <li>User-selected images are transmitted directly from the user's device to
-          Google's Gemini API. SilverLiningProjects is not in the transmission path
-          and does not receive, intercept, or forward this data.</li>
+        <li>User-selected and user-shared content (images, fetched web page text,
+          shared text) is transmitted directly from the user's device to Google's
+          Gemini API. SilverLiningProjects is not in the transmission path and does
+          not receive, intercept, or forward this data.</li>
+        <li>When you share a web link to the app, your device fetches the public
+          page over HTTPS using the device's own network stack. That fetch is a
+          normal browser-style request to the destination site. SilverLiningProjects
+          is not involved and has no servers participating in the fetch.</li>
         <li>No Google user data is shared for advertising, analytics, marketing, or
           any purpose other than the core app functionality described above.</li>
       </ul>
@@ -171,12 +218,16 @@
       </p>
       <ul>
         <li><strong>Google Sign-In</strong> (authentication)</li>
-        <li><strong>Google Gemini AI</strong> (processing user-selected images)</li>
+        <li><strong>Google Gemini AI</strong> (processing user-selected and
+          user-shared content: images, fetched web page text, and shared text)</li>
+        <li><strong>Public web pages you choose to share</strong> (when you share a
+          web link to the app, your device fetches the page over HTTPS directly from
+          the destination site; the resulting page text is then sent to Gemini)</li>
       </ul>
       <p>
-        These communications occur between your device and Google.
-        SilverLiningProjects does not receive the content, but Google may process
-        and retain it as described in Google's policies.
+        These communications occur between your device and the listed third parties.
+        SilverLiningProjects does not receive the content, but those parties may
+        process and retain it as described in their own policies.
       </p>
 
       <h2>Data Storage</h2>

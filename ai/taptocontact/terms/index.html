@@ -44,7 +44,7 @@
     <div class="container">
       <span class="tag">Legal</span>
       <h1>Terms of Use</h1>
-      <p class="last-updated">Last updated: April 7, 2026</p>
+      <p class="last-updated">Last updated: April 11, 2026</p>
 
       <p>
         These Terms of Use ("Terms") govern your use of the TapToContact mobile
@@ -56,34 +56,43 @@
       <p>
         TapToContact is a mobile application that uses Google Gemini AI to extract
         contact information from email signatures, business cards, websites, text
-        messages, or any image containing contact details. The App requests your
+        messages, or any content containing contact details. The App requests your
         permission to access your camera and photo gallery so you can take a photo
-        or choose one or more screenshots. You may select multiple images of the
-        same contact and the App will merge them into a single contact record.
-        The App never automatically scans, browses, or processes your photos — it
-        only uses the specific images you select each time. Extracted contacts are
-        saved to your device's address book.
+        or choose one or more screenshots, and you may also use your operating
+        system's share sheet to send an image, a web link, or a text selection to
+        the App from any other app on your device. You may select multiple images
+        of the same contact and the App will merge them into a single contact
+        record. The App never automatically scans, browses, or processes your
+        photos or other content &mdash; it only uses the specific items you select
+        or explicitly share to it each time. Extracted contacts are saved to your
+        device's address book. After saving a contact that was created from one or
+        more photos you picked from your device's Photos library, the App may ask
+        if you want to delete those specific source photo(s); this is optional,
+        initiated by you, and confirmed by your operating system before any
+        deletion happens.
       </p>
 
       <h2>2. Google Account Requirement</h2>
       <p>
         The App requires a Google account to function. By signing in, you authorize
         the App to use your own Google account's Gemini AI access to process the
-        images you select. SilverLiningProjects does not provide or use any of its
-        own API keys, accounts, or servers. You are responsible for maintaining the
-        security of your Google account.
+        content you select or share. SilverLiningProjects does not provide or use
+        any of its own API keys, accounts, or servers. You are responsible for
+        maintaining the security of your Google account.
       </p>
 
       <h2>3. AI Processing and Data</h2>
       <p>
-        When you select one or more screenshots or photos and tap to process them,
-        the selected images are sent directly from your device to Google's Gemini
-        API using your own Google account credentials. No other images on your
-        device are sent or accessed.
-        SilverLiningProjects does not receive, store, or have access to your images
-        or extracted contact data. Google may retain submitted images per their
-        terms of service. Google's handling of data submitted to the Gemini API
-        is governed by the
+        When you select or share content to convert, that content is sent directly
+        from your device to Google's Gemini API using your own Google account
+        credentials. For images, the selected image file is sent. For shared web
+        links, your device fetches the public page over HTTPS from the destination
+        site and sends only the resulting page text to Gemini. For shared text,
+        the text is sent as-is. In all cases, no other content on your device is
+        sent or accessed. SilverLiningProjects does not receive, store, or have
+        access to your content or extracted contact data. Google may retain
+        submitted content per their terms of service. Google's handling of data
+        submitted to the Gemini API is governed by the
         <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Terms of Service</a>
         and
         <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
@@ -142,7 +151,23 @@
         before saving.
       </p>
 
-      <h2>9. Third-Party Services</h2>
+      <h2>9. Optional Photo Deletion</h2>
+      <p>
+        After you save a contact that was extracted from one or more photos you
+        picked from your device's Photos library (including screenshots), the App
+        may offer to delete those specific source photo(s) from your Photos
+        library. This is entirely optional and can only happen if you explicitly
+        confirm both the in-app prompt and the operating system's native deletion
+        dialog. The App only targets the specific photo(s) you just processed and
+        never reads, browses, or modifies any other photo in your library. Photos
+        taken with the in-app camera, photos that were shared into the App from
+        another app via the system share sheet, and shared web links or text
+        never trigger the delete prompt because they are not items in your Photos
+        library. SilverLiningProjects is not liable for any photo that you choose
+        to delete through this optional flow.
+      </p>
+
+      <h2>10. Third-Party Services</h2>
       <p>
         The App relies on Google's Gemini AI and Google Sign-In to function.
         SilverLiningProjects does not control these services and is not responsible
@@ -152,7 +177,7 @@
         is governed by Google's terms, not ours.
       </p>
 
-      <h2>10. Disclaimer of Warranties</h2>
+      <h2>11. Disclaimer of Warranties</h2>
       <p>
         The App and AI-powered contact extraction are provided "as is" and "as
         available" without warranties of any kind, either express or implied. We
@@ -161,7 +186,7 @@
         uninterrupted, error-free, or free of harmful components.
       </p>
 
-      <h2>11. Limitation of Liability</h2>
+      <h2>12. Limitation of Liability</h2>
       <p>
         To the maximum extent permitted by law, SilverLiningProjects shall not be
         liable for any indirect, incidental, special, consequential, or punitive
@@ -172,7 +197,7 @@
         in the 12 months preceding the claim.
       </p>
 
-      <h2>12. No Data Liability</h2>
+      <h2>13. No Data Liability</h2>
       <p>
         SilverLiningProjects has no servers, databases, or access to your data.
         Any data retention or processing that occurs is between your device and
@@ -182,7 +207,7 @@
         privacy policy.
       </p>
 
-      <h2>13. Account Termination</h2>
+      <h2>14. Account Termination</h2>
       <p>
         You may stop using the App at any time by signing out or uninstalling it.
         All locally stored data is deleted when you use the "Delete Account &amp; Data"
@@ -191,14 +216,14 @@
         <a href="/ai/taptocontact/delete-data/">Delete Your Data</a> page.
       </p>
 
-      <h2>14. Changes to These Terms</h2>
+      <h2>15. Changes to These Terms</h2>
       <p>
         We may update these Terms from time to time. We will notify you of changes
         by posting the new Terms on this page and updating the "Last updated" date.
         Continued use of the App after changes constitutes acceptance of the updated Terms.
       </p>
 
-      <h2>15. Contact Us</h2>
+      <h2>16. Contact Us</h2>
       <p>
         If you have any questions about these Terms, please contact us at:
       </p>
