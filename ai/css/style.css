@@ -6,7 +6,11 @@
   --dark: #222222;
   --gray: #666666;
   --gray-light: #999999;
-  --silver: #c0c0c0;
+  /* A++-S3 (Scott answer 1A, 2026-04-20): darkened from #c0c0c0 to
+     #767676 so the "Silver" word of SilverLiningProjects reaches
+     4.54:1 on white (WCAG 1.4.3 AA). Visual muted feel preserved;
+     low-vision users can now read the wordmark. */
+  --silver: #767676;
   --silver-light: #f5f5f5;
   --border: #e0e0e0;
   --white: #ffffff;
@@ -655,4 +659,39 @@ img { max-width: 100%; height: auto; display: block; }
   .footer-links {
     justify-content: center;
   }
+}
+
+/* A++-S2 skip-link (WCAG 2.4.1): absolutely positioned off-screen
+   until focused. First Tab on any page surfaces it and jumps focus
+   to #main so keyboard users can bypass the repeating nav. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--black);
+  color: var(--white);
+  padding: 12px 16px;
+  z-index: 10000;
+  text-decoration: none;
+  font-weight: 600;
+}
+.skip-link:focus {
+  left: 0;
+  outline: 2px solid var(--silver);
+  outline-offset: 2px;
+}
+
+/* A++-S4 focus-visible (WCAG 2.4.7 + 2.4.11): global visible focus
+   ring. Uses :focus-visible so mouse clicks do not trigger the ring
+   while keyboard Tab navigation does. Covers every interactive by
+   default; components with brand-specific focus styles may override. */
+a:focus-visible,
+button:focus-visible,
+.nav-toggle:focus-visible,
+.store-btn:focus-visible,
+.btn:focus-visible,
+.btn-primary:focus-visible,
+.btn-outline:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 2px;
 }

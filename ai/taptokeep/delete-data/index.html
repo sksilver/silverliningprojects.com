@@ -11,8 +11,8 @@
     gtag('config', 'G-W4G8C1CVRL');
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delete Your Data — TapToKeep</title>
-  <meta name="description" content="How to delete your TapToKeep account and data. All data is stored locally on your device.">
+  <title>Delete Your Data: TapToKeep</title>
+  <meta name="description" content="How to delete your TapToKeep account and associated data, both in our secure service and on your device.">
   <link rel="icon" type="image/png" href="../../images/taptokeep-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,16 +21,18 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <!-- Navigation -->
   <nav class="nav">
     <div class="container">
       <a href="/ai" class="nav-brand">
         <span class="silver">Silver</span>Lining<span class="lining">Projects</span>
       </a>
-      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-        <span></span><span></span><span></span>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links-list">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links-list">
         <li><a href="/ai">Home</a></li>
         <li><a href="/ai/taptokeep/">TapToKeep</a></li>
         <li><a href="/ai/taptokeep/privacy/">Privacy</a></li>
@@ -39,18 +41,16 @@
     </div>
   </nav>
 
+  <main id="main">
+
   <!-- Delete Data Content -->
   <section class="legal">
     <div class="container">
       <span class="tag">Account &amp; Data</span>
       <h1>Delete Your Data</h1>
-      <p class="last-updated">Last updated: April 12, 2026</p>
+      <p class="last-updated">Last updated: April 20, 2026</p>
 
-      <p>
-        TapToKeep stores all data locally on your device. We have no servers,
-        no databases, and no copies of your data. Deleting your data is instant
-        and permanent.
-      </p>
+      <p>TapToKeep stores your session, profile, and daily scan counter on your device. Content you scan is processed by our secure service and deleted within seconds. We keep your Firebase Auth record (name, email, UID) on our backend so we can authenticate you across devices; you can delete that at any time with the steps below. Contacts you save go to your device's address book, not to us.</p>
 
       <h2>Option 1: Delete Account and All Data</h2>
       <p>This removes everything the app has stored on your device.</p>
@@ -61,31 +61,27 @@
       </ol>
       <p><strong>What gets deleted:</strong></p>
       <ul>
-        <li>Your Google Sign-In session</li>
-        <li>Your scan counter and usage history</li>
-        <li>All locally stored preferences and settings</li>
-        <li>Your Google access token is revoked (the app can no longer access your account)</li>
+        <li>Your Firebase sign-in session is cleared on this device</li>
+        <li>Your Firebase Auth record on our backend is deleted</li>
+        <li>Your scan counter, profile, and all locally stored preferences are wiped</li>
+        <li>Any server-side consent records tied to your account are deleted</li>
+        <li>TapToKeep never held broader access to your Google or Apple account; sign-in is identity only, so no third-party API tokens are used</li>
       </ul>
       <p><strong>What is NOT affected:</strong></p>
       <ul>
-        <li>Your Google account itself (it is not changed or deleted)</li>
+        <li>Your sign-in account itself (Google or Apple, not changed or deleted)</li>
         <li>Contacts you already saved to your phone's address book</li>
         <li>Your app store subscription (manage this in your device's app store settings)</li>
       </ul>
 
       <h2>Option 2: Sign Out Only</h2>
-      <p>
-        If you just want to disconnect your Google account without deleting all data:
-      </p>
+      <p>If you just want to disconnect your sign-in account (Google or Apple) without deleting all data:</p>
       <ol>
         <li>Open the TapToKeep app</li>
         <li>Tap the <strong>sign-out icon</strong> in the top-right corner of the home screen</li>
         <li>Confirm by tapping <strong>"Sign Out"</strong></li>
       </ol>
-      <p>
-        This revokes the app's access to your Google account and returns you to
-        the login screen.
-      </p>
+      <p>This ends your Firebase Auth session and returns you to the login screen. TapToKeep never holds scoped access to your Google or Apple account; your account itself is unaffected.</p>
 
       <h2>Option 3: Uninstall the App</h2>
       <p>
@@ -94,14 +90,11 @@
         scan counter. No data remains on your device after uninstalling.
       </p>
 
+      <h2>Option 4: Email-Based Deletion Request</h2>
+      <p>If you cannot access the in-app button (for example, you uninstalled the app), email support-ttk@silverliningprojects.com from the email address you signed in with. Include "Delete my account" in the subject. We will verify your email, delete your Firebase Auth record and any server-side data tied to your account, and confirm by reply within 30 days.</p>
+
       <h2>Data Stored by Google</h2>
-      <p>
-        When you use TapToKeep, content you select is sent to Google's Gemini
-        AI using your own Google account. Google may retain this data per their
-        terms of service. To manage data Google has stored, visit your
-        <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">Google Account Data &amp; Privacy</a>
-        settings.
-      </p>
+      <p>When you use TapToKeep, content you share is processed by Google Gemini AI on Google's Vertex AI platform, under the Google Cloud Service Specific Terms. Google does not use your content to train its public AI models and deletes it after processing beyond operational logs. Your sign-in (if Google) is handled by Firebase Auth under Google's Privacy Policy. To manage data Google has stored on its consumer-account side, visit your <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener noreferrer" aria-label="Google Account Data and Privacy, opens in new tab">Google Account Data &amp; Privacy</a> settings.</p>
 
       <h2>Need Help?</h2>
       <p>
@@ -113,6 +106,8 @@
       </p>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -129,6 +124,7 @@
           <li><a href="/ai/taptokeep/">TapToKeep</a></li>
           <li><a href="/ai/taptokeep/privacy/">Privacy Policy</a></li>
           <li><a href="/ai/taptokeep/terms/">Terms of Use</a></li>
+          <li><a href="/ai/taptokeep/accessibility/">Accessibility</a></li>
           <li><a href="mailto:support-ttk@silverliningprojects.com">Contact</a></li>
         </ul>
       </div>
@@ -138,5 +134,6 @@
     </div>
   </footer>
 
+  <script src="../../js/nav.js"></script>
 </body>
 </html>
