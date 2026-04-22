@@ -2,13 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W4G8C1CVRL"></script>
+  <!-- A++-C Consent Mode v2 default. MUST fire before gtag/js so GA4
+       never gets analytics_storage without explicit consent. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'functionality_storage': 'denied',
+      'personalization_storage': 'denied',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+    try {
+      if (localStorage.getItem('tkConsent') === 'accepted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      }
+    } catch (e) { /* localStorage unavailable, default-deny stands */ }
+  </script>
+  <!-- Google Analytics 4 (property G-VS7ZEY1LNC, scoped to /ai/taptokeep/) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VS7ZEY1LNC"></script>
+  <script>
     gtag('js', new Date());
-    gtag('config', 'G-W4G8C1CVRL');
+    gtag('config', 'G-VS7ZEY1LNC', { 'anonymize_ip': true });
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TapToKeep. Save any contact you see. Anywhere.</title>
@@ -230,6 +249,7 @@
           <li><a href="/ai">Home</a></li>
           <li><a href="/ai#projects">Projects</a></li>
           <li><a href="privacy/">Privacy Policy</a></li>
+          <li><a href="#" data-tk-consent-manage>Manage cookies</a></li>
           <li><a href="terms/">Terms of Use</a></li>
           <li><a href="accessibility/">Accessibility</a></li>
           <li><a href="mailto:support-ttk@silverliningprojects.com">Contact</a></li>
@@ -241,6 +261,22 @@
     </div>
   </footer>
 
+  <!-- A++-C cookie consent banner (shown by consent.js only when
+       localStorage['tkConsent'] is unset). -->
+  <div id="tk-consent-banner" class="tk-consent" role="region" aria-labelledby="tk-consent-title" hidden>
+    <div class="tk-consent-inner">
+      <h2 id="tk-consent-title" class="tk-consent-title">Cookie preferences</h2>
+      <p class="tk-consent-body">
+        <span id="tk-consent-signal" hidden>Your browser's privacy signal has been detected and preferences are set to deny by default. You can still choose Accept below to opt in. </span>This site uses Google Analytics to understand how visitors use TapToKeep. We do not use advertising cookies or share data with third parties for marketing. Read our <a href="privacy/">Privacy Policy</a> for details.
+      </p>
+      <div class="tk-consent-actions">
+        <button type="button" class="tk-consent-reject" id="tk-consent-reject">Reject</button>
+        <button type="button" class="tk-consent-accept" id="tk-consent-accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
   <script src="../js/nav.js"></script>
+  <script src="../js/consent.js"></script>
 </body>
 </html>

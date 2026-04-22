@@ -695,3 +695,82 @@ button:focus-visible,
   outline: 2px solid var(--black);
   outline-offset: 2px;
 }
+
+/* ── A++-C cookie consent banner ── */
+/* Fixed bottom sheet per Scott 2026-04-20 answer 3C (black surface,
+   white/black Accept button). Shown only when localStorage['tkConsent']
+   is unset. GPC/DNT detected users see an additional disclosure sentence
+   revealed by consent.js. */
+.tk-consent {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--black);
+  color: var(--white);
+  z-index: 9999;
+  padding: 20px 16px;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.25);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.tk-consent[hidden] { display: none !important; }
+.tk-consent-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.tk-consent-title {
+  font-size: 1.05rem;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  flex: 0 0 auto;
+}
+.tk-consent-body {
+  flex: 1 1 300px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+.tk-consent-body a {
+  color: var(--white);
+  text-decoration: underline;
+}
+.tk-consent-actions {
+  display: flex;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+.tk-consent-accept,
+.tk-consent-reject {
+  font: inherit;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid var(--white);
+  font-weight: 600;
+  min-height: 44px;
+  min-width: 96px;
+}
+.tk-consent-accept {
+  background: var(--white);
+  color: var(--black);
+}
+.tk-consent-reject {
+  background: transparent;
+  color: var(--white);
+}
+.tk-consent-accept:focus-visible,
+.tk-consent-reject:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .tk-consent-inner { flex-direction: column; align-items: stretch; }
+  .tk-consent-actions { justify-content: stretch; }
+  .tk-consent-accept,
+  .tk-consent-reject { flex: 1; }
+}
