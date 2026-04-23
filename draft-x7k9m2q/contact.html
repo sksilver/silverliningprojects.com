@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | SilverLiningProjects</title>
   <meta name="description" content="Get in touch with SilverLiningProjects for growth marketing, brand strategy, social media, and AI consulting.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ADR-047 Part 4.6.3: self-hosted Inter + Cormorant Garamond. No
+       IP-disclosure to Google before user consent. See ai/fonts/fonts.css. -->
+  <link rel="stylesheet" href="../ai/fonts/fonts.css">
   <link rel="stylesheet" href="../ai/css/style.css">
   <style>
     .contact-form {
@@ -88,16 +88,19 @@
 </head>
 <body>
 
+  <!-- ADR-047 Part 4.6.4: skip-link. First tab stop jumps past the nav to the main landmark. -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <!-- Navigation -->
   <nav class="nav">
     <div class="container">
       <a href="/draft-x7k9m2q/" class="nav-brand">
         <span class="silver">Silver</span>Lining<span class="lining">Projects</span>
       </a>
-      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-        <span></span><span></span><span></span>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links-list">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links-list">
         <li><a href="/draft-x7k9m2q/">Home</a></li>
         <li><a href="/draft-x7k9m2q/#services">Services</a></li>
         <li><a href="/draft-x7k9m2q/#about">About</a></li>
@@ -106,6 +109,8 @@
       </ul>
     </div>
   </nav>
+
+  <main id="main">
 
   <!-- Contact Form -->
   <section class="section">
@@ -164,6 +169,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -187,5 +194,6 @@
     </div>
   </footer>
 
+  <script src="../ai/js/nav.js"></script>
 </body>
 </html>
