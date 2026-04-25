@@ -67,7 +67,7 @@
     <div class="container">
       <span class="tag">Legal</span>
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: April 20, 2026</p>
+      <p class="last-updated">Last updated: April 24, 2026</p>
 
       <p>
         Silver Lining Projects LLC ("we", "our", "us") built the TapToKeep app
@@ -88,12 +88,12 @@
       <h2>Notice at Collection (California residents)</h2>
       <p>We collect these categories of personal information, as defined under Cal. Civ. Code &sect; 1798.140:</p>
       <ul>
-        <li><strong>Identifiers (&sect; 1798.140(v)(1)(A)):</strong> name, email address, Firebase UID. Source: Google or Apple at sign-in. Purpose: account authentication. Retention: until you delete your account or are inactive for 24 months.</li>
+        <li><strong>Identifiers (&sect; 1798.140(v)(1)(A)):</strong> name, email address, Firebase UID. Source: Google, Apple, or Facebook at sign in. Purpose: account authentication. Retention: until you delete your account or are inactive for 24 months.</li>
         <li><strong>Customer records information (&sect; 1798.140(v)(1)(B)):</strong> email address. Purpose: account authentication. Retention: same.</li>
-        <li><strong>Commercial information (&sect; 1798.140(v)(1)(D)):</strong> subscription status, daily scan count. Purpose: billing, rate limits. Retention: device-local; reset daily.</li>
+        <li><strong>Commercial information (&sect; 1798.140(v)(1)(D)):</strong> subscription status, daily scan count. Purpose: billing, rate limits. Retention: device local; reset daily.</li>
         <li><strong>Internet or other electronic network activity information (&sect; 1798.140(v)(1)(F)):</strong> Cloud Function request logs (IP address, timestamp, user agent) retained up to 30 days for abuse prevention, then deleted.</li>
-        <li><strong>Audio, electronic, visual, or similar information (&sect; 1798.140(v)(1)(I)):</strong> images you choose to scan. Retention: held only during processing (seconds), then auto-deleted.</li>
-        <li><strong>Content you submit for extraction:</strong> shared text, fetched web page text, email content. Retention: held only during processing, then auto-deleted.</li>
+        <li><strong>Audio, electronic, visual, or similar information (&sect; 1798.140(v)(1)(I)):</strong> images you choose to scan. Retention: held only during processing (seconds), then auto deleted.</li>
+        <li><strong>Content you submit for extraction:</strong> shared text, fetched web page text, email content. Retention: held only during processing, then auto deleted.</li>
       </ul>
       <p>We do <strong>not</strong> collect: biometric information, geolocation data, professional or employment information, education information, or inferences used to create consumer profiles.</p>
       <p>We do <strong>not</strong> sell or share your personal information for cross-context behavioral advertising, and have not done so in the preceding 12 months.</p>
@@ -101,9 +101,9 @@
 
       <h2>How the App Works</h2>
       <p>
-        <strong>Sign-in:</strong> You sign in with Google or Apple. We use
-        Firebase Auth, which confirms your identity and gives the app a short-lived
-        session token. TapToKeep never sees your Google or Apple password. The
+        <strong>Sign in:</strong> You sign in with Google, Apple, or Facebook. We use
+        Firebase Auth, which confirms your identity and gives the app a short lived
+        session token. TapToKeep never sees your Google, Apple, or Facebook password. The
         session token is stored on your device only to keep you signed in.
       </p>
       <p>
@@ -119,7 +119,7 @@
         <strong>Shared web links:</strong> When you share a web link, our secure
         service fetches the public page over HTTPS and sends only the resulting
         page text to Google Gemini AI. Your device does not fetch the page directly.
-        This keeps page-fetch safety protections (including checks that block
+        This keeps page fetch safety protections (including checks that block
         requests to internal or private addresses) on a server we control instead
         of a device an attacker might compromise.
       </p>
@@ -136,7 +136,7 @@
         device's Photos library (including screenshots), TapToKeep may ask if you
         want to delete those specific source photo(s) from your Photos library. This
         is entirely optional. If you choose to delete, TapToKeep uses your operating
-        system's targeted-delete API. On Android this is
+        system's targeted delete API. On Android this is
         <code>MediaStore.createDeleteRequest</code>, on iOS this is
         <code>PhotoKit.PHAssetChangeRequest.deleteAssets</code>. In both cases your
         operating system shows its own native confirmation dialog before any photo
@@ -144,7 +144,7 @@
         library (specifically, the app does <em>not</em> declare the Android
         <code>READ_MEDIA_IMAGES</code> permission). The only photos the app can
         target are the specific ones you just processed in the same session. Photos
-        taken with the in-app camera, photos shared into the app from other apps,
+        taken with the in app camera, photos shared into the app from other apps,
         and shared web links or text never trigger the delete prompt because they
         are not items in your Photos library.
       </p>
@@ -160,20 +160,21 @@
 
       <h3>Data Accessed</h3>
       <ul>
-        <li><strong>Sign-in profile:</strong> Your name and email address are
-          received from Google or Apple when you sign in. These are used only
-          to maintain your signed-in session and are not shown to other users.</li>
-        <li><strong>Shared content (images, web pages, text, emails):</strong>
+        <li><strong>Sign in profile:</strong> Your name and email address are
+          received from Google, Apple, or Facebook when you sign in. These are
+          used only to maintain your signed in session and are not shown to
+          other users.</li>
+        <li><strong>Shared content (web pages, text, emails, images):</strong>
           When you pick, capture, or share content to the app, only that single
           item is sent to our secure service for processing by Google Gemini AI.
           The API returns extracted contact text (names, phone numbers, emails,
           addresses). No other content on your device is accessed.</li>
-        <li><strong>Contacts (write-only):</strong> The app writes new contacts
+        <li><strong>Contacts (write only):</strong> The app writes new contacts
           to your device's address book when you confirm. It does not read,
           browse, or delete existing contacts.</li>
-        <li><strong>Device Photos library (optional, user-initiated only):</strong>
+        <li><strong>Device Photos library (optional, user initiated only):</strong>
           If you choose to delete a source photo after saving a contact, the
-          app uses your operating system's targeted-delete API
+          app uses your operating system's targeted delete API
           (<code>MediaStore.createDeleteRequest</code> on Android,
           <code>PHAssetChangeRequest.deleteAssets</code> on iOS) to delete only
           the specific photo(s) you just processed. The app does NOT request
@@ -182,11 +183,11 @@
 
       <h3>Data Usage</h3>
       <ul>
-        <li>Your sign-in profile (name, email) is used solely to maintain
-          your signed-in session.</li>
+        <li>Your sign in profile (name, email) is used solely to maintain
+          your signed in session.</li>
         <li>Shared content is forwarded to Google Gemini AI exclusively for the
           purpose of extracting contact information.</li>
-        <li>The write-to-contacts capability is used only to save extracted
+        <li>The write to contacts capability is used only to save extracted
           contacts to your device's address book when you confirm.</li>
         <li>The Photos library delete capability is used only, and only when you
           confirm, to remove the specific source photo(s) you just used for a
@@ -198,11 +199,11 @@
         <li>Silver Lining Projects LLC does not sell or share your data with any
           third party for advertising, analytics, marketing, or any purpose
           other than the core app functionality described above.</li>
-        <li>User-shared content (web pages, text, emails, images) passes through
+        <li>User shared content (web pages, text, emails, images) passes through
           our secure service to reach Google Gemini AI for processing. Our service
           does not store the content after processing completes.</li>
         <li>When you share a web link, our service fetches the public page over
-          HTTPS on your behalf. That fetch is a normal server-side request to
+          HTTPS on your behalf. That fetch is a normal server side request to
           the destination site.</li>
       </ul>
 
@@ -230,7 +231,7 @@
           on your device until you sign out, delete your account data, or uninstall
           the app.</li>
         <li>You can delete all locally stored data at any time by tapping the "Delete
-          Account &amp; Data" button in the app, or by uninstalling. For step-by-step
+          Account &amp; Data" button in the app, or by uninstalling. For step by step
           instructions, visit our
           <a href="/ai/taptokeep/delete-data/">Delete Your Data</a> page.</li>
         <li>You can revoke the app's access to your Google account at any time at
@@ -254,7 +255,7 @@
         To provide the app's core functionality, TapToKeep communicates with:
       </p>
       <ul>
-        <li><strong>Firebase Auth (Google or Apple sign-in):</strong> for
+        <li><strong>Firebase Auth (Google, Apple, or Facebook sign in):</strong> for
           authentication</li>
         <li><strong>Public web pages you choose to share:</strong> our secure
           service fetches the page over HTTPS to extract its text</li>
@@ -269,59 +270,60 @@
       <h2>Legal bases we rely on (EEA, UK, and Switzerland users)</h2>
       <ul>
         <li><strong>Authentication (Firebase Auth, your name and email):</strong> Art. 6(1)(b) GDPR. Performance of a contract.</li>
-        <li><strong>Processing shared content through our Cloud Function and Google Gemini AI on Vertex AI:</strong> Art. 6(1)(b). Performance of the contact-extraction service you requested.</li>
-        <li><strong>Scan counter and abuse-prevention rate limits:</strong> Art. 6(1)(f). Legitimate interests in preventing abuse and managing API costs; minimal privacy impact.</li>
-        <li><strong>Service-integrity logs:</strong> Art. 6(1)(f). Legitimate interest in security monitoring.</li>
+        <li><strong>Processing shared content through our Cloud Function and Google Gemini AI on Vertex AI:</strong> Art. 6(1)(b). Performance of the contact extraction service you requested.</li>
+        <li><strong>Scan counter and abuse prevention rate limits:</strong> Art. 6(1)(f). Legitimate interests in preventing abuse and managing API costs; minimal privacy impact.</li>
+        <li><strong>Service integrity logs:</strong> Art. 6(1)(f). Legitimate interest in security monitoring.</li>
         <li><strong>Optional photo deletion prompts:</strong> Art. 6(1)(a). Your explicit consent at each prompt, revocable by declining.</li>
       </ul>
       <p>You can object to any Art. 6(1)(f) processing under Art. 21 GDPR by contacting support-ttk@silverliningprojects.com.</p>
 
       <h2>International Transfers</h2>
-      <p>Your personal data is processed by Google LLC on Google Cloud infrastructure in the United States (region us-central1). If you access TapToKeep from the EU, UK, or Switzerland, your shared content and sign-in profile are transferred to the United States. We rely on:</p>
+      <p>Your personal data is processed by Google LLC on Google Cloud infrastructure in the United States (region us-central1). When you sign in with Apple, Apple Inc. also processes your sign in identity in the United States. When you sign in with Facebook, Meta Platforms, Inc. also processes your sign in identity in the United States. If you access TapToKeep from the EU, UK, or Switzerland, your shared content and sign in profile are transferred to the United States. We rely on:</p>
       <ul>
         <li><strong>EU-US Data Privacy Framework.</strong> Google LLC is self-certified. This covers EU/EEA transfers.</li>
         <li><strong>Standard Contractual Clauses</strong> (Commission Implementing Decision (EU) 2021/914, Modules 2 and 3) as fallback and for UK and Swiss transfers, together with the UK International Data Transfer Addendum.</li>
-        <li><strong>Transfer Impact Assessment.</strong> We have assessed US surveillance risks against the limited, short-lived, user-initiated nature of the transferred content. A summary is available on request.</li>
+        <li><strong>Transfer Impact Assessment.</strong> We have assessed US surveillance risks against the limited, short lived, user initiated nature of the transferred content. A summary is available on request.</li>
       </ul>
 
       <h2>Your rights</h2>
-      <p>Under applicable data-protection laws you have the right to: (a) access your personal data; (b) rectify inaccurate data; (c) erase your data; (d) restrict or object to processing; (e) data portability in a machine-readable format; (f) withdraw consent at any time without affecting prior processing; and (g) not be subject to solely automated decisions with legal or similarly significant effect (GDPR Art. 22). Our AI extraction is not such a decision because you review and confirm every result.</p>
+      <p>Under applicable data protection laws you have the right to: (a) access your personal data; (b) rectify inaccurate data; (c) erase your data; (d) restrict or object to processing; (e) data portability in a machine-readable format; (f) withdraw consent at any time without affecting prior processing; and (g) not be subject to solely automated decisions with legal or similarly significant effect (GDPR Art. 22). Our AI extraction is not such a decision because you review and confirm every result.</p>
       <p>To exercise any right, email support-ttk@silverliningprojects.com. We respond within 30 days (GDPR, UK GDPR, LGPD) or the statutory period applicable to your jurisdiction.</p>
       <p><strong>Right to lodge a complaint.</strong> EEA residents may complain to their national Data Protection Authority (list at edpb.europa.eu). UK: Information Commissioner's Office (ico.org.uk). Switzerland: Federal Data Protection and Information Commissioner (edoeb.admin.ch). Canada: Office of the Privacy Commissioner (priv.gc.ca); Quebec residents may also complain to the CAI. Australia: Office of the Australian Information Commissioner (oaic.gov.au). Brazil: ANPD (gov.br/anpd).</p>
 
       <h2 id="retention-schedule">Retention periods</h2>
       <ul>
         <li>Firebase Auth account (UID, name, email): until you delete your account or 24 months of inactivity, whichever first.</li>
-        <li>Cloud Function operational logs (request IDs, timing, error codes, no content): 30 days, then auto-purged by Google Cloud Logging.</li>
+        <li>Cloud Function operational logs (request IDs, timing, error codes, no content): 30 days, then auto purged by Google Cloud Logging.</li>
         <li>Google Cloud Storage <code>temp-scans/</code> uploaded images: deleted on job completion; hard TTL of 24 hours enforced by bucket lifecycle rule.</li>
-        <li>Local-device session token, name, email, scan counter: until you sign out, uninstall, or tap "Delete Account &amp; Data."</li>
+        <li>Local device session token, name, email, scan counter: until you sign out, uninstall, or tap "Delete Account &amp; Data."</li>
         <li>Consent records (what you agreed to and when): account lifetime plus 3 years (legal obligation).</li>
       </ul>
 
       <h2>AI Disclosure</h2>
       <p>TapToKeep uses a generative AI system (Google Gemini on Google's Vertex AI platform, operated by Google LLC) to extract contact information from content you submit. You are interacting with an AI system (EU AI Act Art. 50). The AI does not make any decision with legal or similarly significant effect; it proposes text for your review, and every saved contact requires your explicit confirmation.</p>
-      <p>Content sent to Google through Vertex AI is processed under Google Cloud's Vertex AI Service Specific Terms, which prohibit Google from using your content to train, improve, or fine-tune Google's public AI models. Google retains the content only for a short abuse-detection logging window and then deletes it.</p>
+      <p>Content sent to Google through Vertex AI is processed under Google Cloud's Vertex AI Service Specific Terms, which prohibit Google from using your content to train, improve, or fine-tune Google's public AI models. Google retains the content only for a short abuse detection logging window and then deletes it.</p>
 
-      <h2>Sensitive / special-category data</h2>
-      <p>Business cards, email signatures, and web pages sometimes reveal information that EU, UK, Swiss, Brazilian, or South African law treats as sensitive (a religious title, a health profession, trade-union membership, or a facial photograph). We rely on two lawful bases for any such data: (i) your explicit consent, given by tapping the consent checkbox before each sign-in session (GDPR Art. 9(2)(a); LGPD Art. 11(I)); and (ii) the data has been manifestly made public by the subject of the card or signature (GDPR Art. 9(2)(e)). We do not retain this data after extraction and we do not use it to profile you.</p>
+      <h2>Sensitive / special category data</h2>
+      <p>Business cards, email signatures, and web pages sometimes reveal information that EU, UK, Swiss, Brazilian, or South African law treats as sensitive (a religious title, a health profession, trade union membership, or a facial photograph). We rely on two lawful bases for any such data: (i) your explicit consent, given by tapping the consent checkbox before each sign in session (GDPR Art. 9(2)(a); LGPD Art. 11(I)); and (ii) the data has been manifestly made public by the subject of the card or signature (GDPR Art. 9(2)(e)). We do not retain this data after extraction and we do not use it to profile you.</p>
 
       <h2>Biometric identifiers</h2>
-      <p>TapToKeep does not collect, capture, store, or use biometric identifiers or biometric information as those terms are defined in the Illinois Biometric Information Privacy Act (740 ILCS 14/10), the Texas Capture or Use of Biometric Identifier Act (Tex. Bus. &amp; Com. Code &sect; 503.001), or the Washington My Health My Data Act. We do not scan face geometry, fingerprints, voiceprints, retina or iris scans, or hand or face scan geometries. Images are processed only to extract text-based contact details; our prompt instructs Google Gemini to ignore face data in submitted images.</p>
+      <p>TapToKeep does not collect, capture, store, or use biometric identifiers or biometric information as those terms are defined in the Illinois Biometric Information Privacy Act (740 ILCS 14/10), the Texas Capture or Use of Biometric Identifier Act (Tex. Bus. &amp; Com. Code &sect; 503.001), or the Washington My Health My Data Act. We do not scan face geometry, fingerprints, voiceprints, retina or iris scans, or hand or face scan geometries. Images are processed only to extract text based contact details; our prompt instructs Google Gemini to ignore face data in submitted images.</p>
 
       <h2>Data breach notification</h2>
-      <p>We will notify the relevant Data Protection Authority within 72 hours of becoming aware of a personal-data breach where required by law (GDPR Art. 33), and will notify affected individuals without undue delay where the breach is likely to result in a high risk to their rights and freedoms (GDPR Art. 34). We maintain a breach register.</p>
+      <p>We will notify the relevant Data Protection Authority within 72 hours of becoming aware of a personal data breach where required by law (GDPR Art. 33), and will notify affected individuals without undue delay where the breach is likely to result in a high risk to their rights and freedoms (GDPR Art. 34). We maintain a breach register.</p>
 
       <h2>Sub-processors</h2>
       <ul>
         <li><strong>Google LLC</strong> (United States): Firebase Auth, Google Cloud Functions, Google Cloud Storage, Google Vertex AI running Gemini models, Cloud Logging.</li>
-        <li><strong>Apple Inc.</strong> (United States): Sign in with Apple, when you choose Apple sign-in.</li>
+        <li><strong>Apple Inc.</strong> (United States): Sign in with Apple, when you choose Apple sign in.</li>
+        <li><strong>Meta Platforms, Inc.</strong> (United States): Sign in with Facebook, when you choose Facebook sign in. We request only your public profile and email address. We do not request your friends list or any advertising or marketing permissions, and we disable Meta's SDK tracking at app initialization.</li>
         <li><strong>Google Ireland Ltd</strong> (Ireland): Google Analytics 4 (website only).</li>
       </ul>
       <p>We will notify you by email at least 30 days before adding a new sub-processor that processes your personal data. You may terminate your account if you do not accept the change.</p>
 
       <h2>Data Storage</h2>
       <p>
-        Locally on your device, the app stores only a short-lived Firebase Auth
+        Locally on your device, the app stores only a short lived Firebase Auth
         session token, your basic profile (name, email), and the daily scan
         counter, all in encrypted secure storage. On our service, uploaded
         images are held in temporary storage only for the duration of a scan and
@@ -331,13 +333,13 @@
       <h2>Data Deletion</h2>
       <p>
         You can remove locally stored app data by uninstalling the app or using
-        the in-app "Delete Account &amp; Data" option. That option clears your
+        the in app "Delete Account &amp; Data" option. That option clears your
         session token, profile, and scan counter on your device, and also signs
         you out of Firebase Auth. Because we do not retain shared content after
         processing, no content on our service remains to delete. You can revoke
         Google access at your
         <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">Google account permissions page</a>.
-        For step-by-step instructions, visit our
+        For step by step instructions, visit our
         <a href="/ai/taptokeep/delete-data/">Delete Your Data</a> page.
       </p>
 
@@ -370,7 +372,7 @@
       <p>Silver Lining Projects LLC, a New Jersey limited liability company with a principal place of business at [UPS MAILBOX STREET, STE #, CITY, NJ ZIP]. Email <a href="mailto:support-ttk@silverliningprojects.com">support-ttk@silverliningprojects.com</a> for privacy requests.</p>
 
       <h3>Data Protection Officer</h3>
-      <p>We have not appointed a DPO because we are not required to under GDPR Art. 37, UK DPA 2018 Sch. 1, or Quebec Law 25 s. 8.1. We are not a public body, our core activities do not consist of large-scale monitoring or processing of special categories, and we do not meet the EU Member State, UK, or Quebec thresholds.</p>
+      <p>We have not appointed a DPO because we are not required to under GDPR Art. 37, UK DPA 2018 Sch. 1, or Quebec Law 25 s. 8.1. We are not a public body, our core activities do not consist of large scale monitoring or processing of special categories, and we do not meet the EU Member State, UK, or Quebec thresholds.</p>
 
       <h3>EU representative (GDPR Art. 27)</h3>
       <p>Silver Lining Projects LLC has not yet appointed an EU representative and does not currently offer TapToKeep to EU residents outside of closed beta testing. Before opening public access to users in the EU, we will appoint a representative under GDPR Art. 27 and update this policy with their name and contact details.</p>
@@ -379,14 +381,14 @@
       <p>Silver Lining Projects LLC has not yet appointed a UK representative and does not currently offer TapToKeep to UK residents outside of closed beta testing. Before opening public access to users in the UK, we will appoint a representative under UK GDPR Art. 27 and update this policy with their name and contact details.</p>
 
       <h3>Brazilian Encarregado (LGPD)</h3>
-      <p>[Scott or designate], reachable at support-ttk@silverliningprojects.com.</p>
+      <p>Silver Lining Projects LLC, reachable at support-ttk@silverliningprojects.com.</p>
 
       <h3>Quebec Person in Charge (Law 25)</h3>
-      <p>[Scott or designate], reachable at support-ttk@silverliningprojects.com.</p>
+      <p>Silver Lining Projects LLC, reachable at support-ttk@silverliningprojects.com.</p>
 
       <h2>Your California Privacy Rights</h2>
       <p>If you are a California resident, you have the right to: (1) know what personal information we collect, use, and disclose (Cal. Civ. Code &sect; 1798.100); (2) request deletion (&sect; 1798.105); (3) correct inaccurate personal information (&sect; 1798.106); (4) know categories sold or shared (&sect; 1798.115); (5) opt out of sale or share (&sect; 1798.120); (6) limit use of sensitive personal information (&sect; 1798.121); (7) data portability (&sect; 1798.130); and (8) not be discriminated against for exercising any of these rights (&sect; 1798.125).</p>
-      <p>To exercise any right, email support-ttk@silverliningprojects.com with the subject line "CCPA Rights Request." We verify your identity using your signed-in email and respond within 45 days (extendable once by 45 days with notice).</p>
+      <p>To exercise any right, email support-ttk@silverliningprojects.com with the subject line "CCPA Rights Request." We verify your identity using your signed in email and respond within 45 days (extendable once by 45 days with notice).</p>
       <p><strong>Authorized agent:</strong> You may designate an agent under &sect; 1798.185(a)(7) with a signed, notarized letter of authorization.</p>
       <p><strong>Appeals:</strong> If we deny your request, you may appeal by replying to our response email.</p>
       <p><strong>Shine the Light (&sect; 1798.83):</strong> We do not share personal information with third parties for their own direct marketing purposes.</p>
@@ -398,16 +400,16 @@
       <p>To exercise any of these rights, email support-ttk@silverliningprojects.com. We verify your identity and respond within 45 days (60 days for Colorado, extendable once). If we deny, you may appeal by replying. Colorado, Virginia, and other residents may also contact their state attorney general if the appeal is denied.</p>
 
       <h2>HIPAA</h2>
-      <p>TapToKeep is not a HIPAA-covered entity or business associate. Do not use TapToKeep to process Protected Health Information (PHI) as defined in 45 CFR &sect; 160.103. We have no Business Associate Agreement with Google Cloud, Firebase, or Vertex AI, and content you submit is not treated under HIPAA safeguards.</p>
+      <p>TapToKeep is not a HIPAA covered entity or business associate. Do not use TapToKeep to process Protected Health Information (PHI) as defined in 45 CFR &sect; 160.103. We have no Business Associate Agreement with Google Cloud, Firebase, or Vertex AI, and content you submit is not treated under HIPAA safeguards.</p>
 
       <h2>Cookies and Website Analytics</h2>
       <p>Our website (silverliningprojects.com) uses Google Analytics 4 for aggregate visitor statistics only, not for advertising. Google Analytics is not present in the mobile app itself. IP anonymization is enabled.</p>
       <table>
         <tr><th>Cookie</th><th>Provider</th><th>Purpose</th><th>Duration</th><th>Category</th></tr>
-        <tr><td>_ga</td><td>Google Analytics</td><td>Unique visitor counting</td><td>2 years</td><td>Analytics (non-essential)</td></tr>
-        <tr><td>_ga_VS7ZEY1LNC</td><td>Google Analytics</td><td>Session state</td><td>2 years</td><td>Analytics (non-essential)</td></tr>
+        <tr><td>_ga</td><td>Google Analytics</td><td>Unique visitor counting</td><td>2 years</td><td>Analytics (non essential)</td></tr>
+        <tr><td>_ga_VS7ZEY1LNC</td><td>Google Analytics</td><td>Session state</td><td>2 years</td><td>Analytics (non essential)</td></tr>
       </table>
-      <p>We use only non-essential analytics cookies. No advertising, retargeting, social, session-replay, or profiling cookies are used. You can accept or reject analytics cookies via our consent banner or your browser settings. We honor Global Privacy Control signals.</p>
+      <p>We use only non essential analytics cookies. No advertising, retargeting, social, session replay, or profiling cookies are used. You can accept or reject analytics cookies via our consent banner or your browser settings. We honor Global Privacy Control signals.</p>
     </div>
   </section>
 
