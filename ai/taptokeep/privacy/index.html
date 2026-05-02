@@ -124,6 +124,12 @@
         of a device an attacker might compromise.
       </p>
       <p>
+        <strong>URL grounding mode (web links):</strong> Some shared web links
+        now run in URL grounding mode, where Google's Vertex AI fetches the page
+        on its own infrastructure instead of our service. See the URL Grounding
+        Mode section below for the full disclosure of that path.
+      </p>
+      <p>
         <strong>Image processing:</strong> When you pick a photo, take a picture,
         or share an image, the app uploads the image over HTTPS to our secure
         service. The service forwards the image to Google Gemini AI, receives the
@@ -205,6 +211,10 @@
         <li>When you share a web link, our service fetches the public page over
           HTTPS on your behalf. That fetch is a normal server side request to
           the destination site.</li>
+        <li>When a shared web link runs in URL grounding mode, the URL and the
+          fetched page content flow through Google Vertex AI under the existing
+          sub-processor relationship documented in the Sub-processors section
+          below. URL grounding does not introduce a new sub-processor.</li>
       </ul>
 
       <h3>Data Storage and Protection</h3>
@@ -278,7 +288,7 @@
       <p>You can object to any Art. 6(1)(f) processing under Art. 21 GDPR by contacting support-ttk@silverliningprojects.com.</p>
 
       <h2>International Transfers</h2>
-      <p>Your personal data is processed by Google LLC on Google Cloud infrastructure in the United States (region us-central1). When you sign in with Apple, Apple Inc. also processes your sign in identity in the United States. When you sign in with Facebook, Meta Platforms, Inc. also processes your sign in identity in the United States. If you access TapToKeep from the EU, UK, or Switzerland, your shared content and sign in profile are transferred to the United States. We rely on:</p>
+      <p>Your personal data is processed by Google LLC on Google Cloud infrastructure. For camera scans, Google Cloud processes your data in the United States (region us-central1). For screenshot, URL, and text scans, Google's Vertex AI may route requests to data centers in regions outside your country, covered by Google Cloud's Data Processing Addendum and Standard Contractual Clauses. When you sign in with Apple, Apple Inc. also processes your sign in identity in the United States. When you sign in with Facebook, Meta Platforms, Inc. also processes your sign in identity in the United States. If you access TapToKeep from the EU, UK, or Switzerland, your shared content and sign in profile are transferred to the United States or other regions depending on scan mode. We rely on:</p>
       <ul>
         <li><strong>EU-US Data Privacy Framework.</strong> Google LLC is self-certified. This covers EU/EEA transfers.</li>
         <li><strong>Standard Contractual Clauses</strong> (Commission Implementing Decision (EU) 2021/914, Modules 2 and 3) as fallback and for UK and Swiss transfers, together with the UK International Data Transfer Addendum.</li>
@@ -303,6 +313,15 @@
       <p>TapToKeep uses a generative AI system (Google Gemini on Google's Vertex AI platform, operated by Google LLC) to extract contact information from content you submit. You are interacting with an AI system (EU AI Act Art. 50). The AI does not make any decision with legal or similarly significant effect; it proposes text for your review, and every saved contact requires your explicit confirmation.</p>
       <p>Content sent to Google through Vertex AI is processed under Google Cloud's Vertex AI Service Specific Terms, which prohibit Google from using your content to train, improve, or fine-tune Google's public AI models. Google retains the content only for a short abuse detection logging window and then deletes it.</p>
 
+      <h2>URL Grounding Mode</h2>
+      <p>URL grounding is an alternative path for shared web links. When you share a web link in URL grounding mode, TapToKeep does not fetch the page itself. Instead, the URL is sent to Google's Vertex AI service, and Google's infrastructure fetches the page directly and extracts contact information. The fetch happens on Google's network under the Google Cloud Service Specific Terms.</p>
+      <p>Once Google's infrastructure has the page content, Google Gemini AI on Vertex AI identifies and summarizes the contact information it finds (names, phones, emails, addresses, titles, companies, social media handles). A second Google Gemini AI call then formats the summarized contacts into the structured list your device displays for review.</p>
+      <p>TapToKeep does not store the URL or the fetched page content on our service. Our Cloud Function logs request metadata (request ID, timestamp, error code) for 30 days per the standard log retention policy. No URL or page content is included in our logs.</p>
+      <p>Google's Vertex AI infrastructure retains the fetched page content in a short abuse detection retention window per the Google Cloud Data Processing Addendum. Google does not use this content to train its public AI models. After the abuse detection window closes, Google deletes the content per its standard policy.</p>
+      <p>The URL you shared, the page content fetched by Vertex AI, the AI generated summary, and the structured contact data are all processed by Google Vertex AI under the existing sub-processor relationship documented in the Sub-processors section below. URL grounding does not introduce a new sub-processor; it changes the data flow within the existing Vertex AI integration.</p>
+      <p>URL grounding is a new way TapToKeep handles shared web links. Unlike text or image sharing, where TapToKeep sends the content directly to Google Gemini AI, URL grounding sends the URL to Google's Vertex AI infrastructure, which fetches the page itself. This means Google's infrastructure makes the network request, not your device and not our service. If you are sharing a URL on a private network or a URL you would not otherwise allow Google to access, do not use URL grounding mode for that link.</p>
+      <p>When you share a URL with URL grounding enabled, the scan consumes 2 entries from your daily scan allowance because URL grounding requires two Google Gemini AI calls (one to fetch the URL via Vertex urlContext, one to format the result into structured contacts). The app shows you this scan count consequence before any scan is consumed.</p>
+
       <h2>Sensitive / special category data</h2>
       <p>Business cards, email signatures, and web pages sometimes reveal information that EU, UK, Swiss, Brazilian, or South African law treats as sensitive (a religious title, a health profession, trade union membership, or a facial photograph). We rely on two lawful bases for any such data: (i) your explicit consent, given by tapping the consent checkbox before each sign in session (GDPR Art. 9(2)(a); LGPD Art. 11(I)); and (ii) the data has been manifestly made public by the subject of the card or signature (GDPR Art. 9(2)(e)). We do not retain this data after extraction and we do not use it to profile you.</p>
 
@@ -319,6 +338,7 @@
         <li><strong>Meta Platforms, Inc.</strong> (United States): Sign in with Facebook, when you choose Facebook sign in. We request only your public profile and email address. We do not request your friends list or any advertising or marketing permissions, and we disable Meta's SDK tracking at app initialization.</li>
         <li><strong>Google Ireland Ltd</strong> (Ireland): Google Analytics 4 (website only).</li>
       </ul>
+      <p>URL grounding mode is a new use case within the existing Google Vertex AI sub-processor relationship; it does not introduce a new sub-processor.</p>
       <p>We will notify you by email at least 30 days before adding a new sub-processor that processes your personal data. You may terminate your account if you do not accept the change.</p>
 
       <h2>Data Storage</h2>
